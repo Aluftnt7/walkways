@@ -1,0 +1,16 @@
+
+.width-container {
+    margin: 0 auto;
+        width: 100vw;
+        padding: rem(5px);
+        @include for-mobile-layout {
+            padding: rem(10px);
+        }
+        @include for-normal-layout {
+            width: $break-normal;
+        }
+}
+
+.height-container {
+    min-height: 100vh;
+}

@@ -1,0 +1,92 @@
+.main-footer {
+    // margin-top: 200px;
+    // min-height: 517px;
+    overflow: hidden;
+    .router-link{
+        color: #fff8e2;
+
+    }
+
+    padding: 60px 30px 80px;
+    @include for-normal-layout {
+        padding: 60px 0px 80px;
+    
+    }
+    color: #fff8e2;
+    background-image: url(../assets/svg/background-footer2.svg);
+    background-position: center;
+    background-size: cover;
+    font-family: Montserrat;
+    img {
+        cursor: pointer;
+    }
+
+        .inside-footer-container {
+            height: 100%;
+            
+            .content-container-footer {
+                width: 100%;
+                > * {
+                    margin-bottom: 30px;
+                }
+                margin-top: 30px;
+                @include for-normal-layout {
+                    flex-direction: row;
+                    > * {
+                        margin-bottom: 0px;
+                    }
+                }
+
+                .logo-location-container {
+                    align-items: flex-start;
+                    width: fit-content;
+                    > *:first-child {
+                        margin-bottom: 20px;
+                        margin-inline-end: 20px;
+                    }
+                    > *:last-child {
+                        max-width: 340px;
+                    }
+                    @include for-medium-mobile-layout {
+                        flex-direction: row;
+                            > *:first-child {
+                                margin-bottom: 0px;
+                            }
+                    }
+    
+                    p {
+                        max-width: 339px;
+                        margin: 0;
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding-inline-end: 25px;
+                    }
+                }
+    
+                
+                .phone-email-container {
+                    width: 157.5px;
+                    height: 70px;
+                    cursor: pointer;
+                    p {
+                        font-size: 14px;
+                        margin: 0;
+                        line-height: 21px;
+                    }
+                }
+               .img-svg {
+                   margin: 0 12px;
+                   width: rem(30px);
+                   border: 0.5px solid transparent;
+                   border-radius: 40%;
+                   
+                }
+                ul {
+                    * {
+                        margin-bottom: 16px;
+                        cursor: pointer;
+                    }
+                }
+            }
+          }
+        }

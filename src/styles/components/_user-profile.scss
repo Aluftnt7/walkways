@@ -1,0 +1,104 @@
+.user-profile {
+    margin-top: 65px;
+    min-height: 60vh;
+    margin-bottom: 150px;
+    padding: rem(10px);
+    display: grid;
+    gap: rem(20px);
+    overflow: hidden;
+    
+    
+    .container-img {
+        margin-inline-end: 2ch;
+    }
+    .user-profile-inside-container {
+        align-items: flex-start;
+        .container-img-profile {
+            margin: 0 3ch 80px 0;
+        }
+        label {
+            img {
+                transition: opacity .3s;
+                opacity: 1;
+                &:hover {
+                    opacity: .8;
+                }    
+            }
+        }
+        .container-details-user  {
+            max-width: 360px;
+        }
+        .input-fullname {
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 2.6ch;
+            margin-bottom: 12px;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: initial;
+            max-width: 100%;
+            transition: box-shadow .3s;
+            &:hover, &:focus {
+                box-shadow: inset 0px -0.5px 0px 0px $clr1;
+            }
+        }
+        p {
+            font-size: 25px;
+            font-weight: 400;
+            line-height: 1.6ch;
+            margin: 0;
+            width: 100%;
+            opacity: 0.6;
+        }
+        p:first-child{
+            font-size: 40px;
+            font-weight: 900;
+            line-height: 2.6ch;
+            margin-bottom: 12px;    
+            width: 100%;
+            opacity: 1;
+        }
+        @include for-mobile-layout {
+            flex-direction: row;
+        }
+    }
+
+    .main-content {
+        display: grid;
+        @include for-normal-layout {
+            grid-template-columns: 6fr 4fr;
+            .map {
+                grid-row: 1/2;
+                grid-column: 2/3;
+                height: 100%;
+            }
+        }
+        gap: rem(50px);
+    }
+
+    .notification-preview{
+        display: flex;
+        flex-direction: column;
+        .notification-header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            img{
+                height: rem(30px);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .user-projs-container{
+        display: flex;
+        // flex-wrap: wrap;
+        height: 200px;
+        overflow-x: auto;
+        justify-content: center;
+        align-items: baseline;
+
+    }
+
+}

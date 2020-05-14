@@ -1,0 +1,69 @@
+.my-video {
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    box-shadow: $shadow3;
+    z-index: 10;
+    header {
+        height: 60px;
+        padding: 0 30px;
+        background-color: #4f4b64;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        img {
+            cursor: pointer;
+            &:hover {
+                mix-blend-mode: luminosity;
+            }
+        }
+    }
+    .container-canvas-video {
+        height: 300px;
+        padding: 0 1px;
+        background-color: #4f4b64;
+    }
+    footer {
+        height: 80px;
+        background-color: #dedde8;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    video {
+        transform: rotateY(180deg);
+        &.loading {
+            background-image: url('~@/assets/svg/loading2.svg');
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+        &.stop-video {
+            display: none;
+        }
+    }
+    .profile-img {
+    }
+    canvas {
+        display: none;
+    }
+    .capture-img-contianer, .confirm-img-contianer {
+        border-radius: 50%;
+        padding: 15px;
+        background-color:  #595573;
+        transition: background-color .3s;
+        &:hover {
+          background-color:  #6a6683;
+        }
+        width: fit-content;
+        position: absolute;
+        top: 74%;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: 1000;
+        cursor: pointer;
+    }
+    .confirm-img-contianer {
+        left: 15%;
+    }
+}

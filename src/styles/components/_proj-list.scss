@@ -1,0 +1,103 @@
+// .around-the-world-list {
+//     display: flex;
+//     padding: 0;
+//     flex-wrap: wrap;
+//     justify-content: center;
+//     justify-content: space-between;
+//     width: 100%;
+//     // width: 1080px;
+//     margin: 0 auto;
+//     display: flex;
+//     h4 {
+//         margin: 2px 0
+//     }
+//     h6 {
+//         margin: 4px 0;
+//         font-family: Montserrat;
+//     }
+//     .list-card {
+//         position: relative;
+//         width: 18%;
+//         padding: 5px;
+//         // margin: 5px;
+//         list-style: none;
+//     }
+//     .list-projs-img-conatainer {
+//         background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 58%, rgba(190, 190, 190, 1) 69%, rgba(74, 74, 74, 1) 89%);
+//         /* w3c */
+//     }
+//     .proj-preview-img {
+//         mix-blend-mode: multiply;
+//         border-radius: 3px;
+//         margin: 0;
+//     }
+//     .list-projs-country-details {
+//         position: absolute;
+//         display: flex;
+//         align-items: center;
+//         top: 85%;
+//         padding-bottom: 5px;
+//         padding-left: 5px;
+//         h5 {
+//             // margin: 0;
+//             margin: 0 5px;
+//             color: white;
+//             font-family: Montserrat;
+//             font-size: rem(12px);
+//         }
+//         .world-proj-flag {
+//             height: 20px;
+//             width: 20px;
+//         }
+//         ;
+//     }
+// }
+ .proj-list {
+
+    .header{
+        margin: 10px 0 10px 0;
+        color:  #fff8e2;
+        .page-header{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.05) 0%, rgba(64, 64, 64, 1) 100%);
+        }
+        h2{
+            text-align: center;
+            font-size: rem(25px);
+            margin-bottom: 5px ;
+        }    
+        h3{
+            margin-top: 5px ;
+            text-align: center;
+            font-size: rem(15px);
+        }
+        @include for-mobile-layout {
+            h2{
+                font-size: rem(60px);
+            } 
+            h3{
+                font-size: rem(36px);
+            }
+        }
+        @include for-normal-layout {
+            h2{
+                font-size: rem(80px);
+            } 
+            h3{
+                font-size: rem(48px);
+            }
+            
+        }    
+
+    }
+    .around-the-world-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+        gap: rem(20px);
+        margin-top: 10px;
+        // padding: 12px;
+    }
+ }
